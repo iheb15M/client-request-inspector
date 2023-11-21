@@ -38,7 +38,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.7
-          registry-url: https://registry.npmjs.org
+          registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
         run: npm ci
@@ -49,4 +49,4 @@ jobs:
       - name: Publish to npm
         run: npm publish --access public
         env:
-          NPM_AUTH_TOKEN: ${{ NPM_AUTH_TOKEN_CLIENT_REQUEST_INSPECTOR }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN_CLIENT_REQUEST_INSPECTOR }}
