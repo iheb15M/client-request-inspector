@@ -3,8 +3,7 @@
 ![npm](https://img.shields.io/npm/v/client-request-inspector)
 ![npm](https://img.shields.io/npm/dt/client-request-inspector)
 ![NPM](https://img.shields.io/npm/l/client-request-inspector)
-![GitHub issues](https://img.shields.io/github/issues/iheb15M/client-request-inspector)
-
+[![Coverage](https://github.com/iheb15M/client-request-inspector/actions/workflows/coverage.yml/badge.svg)](https://github.com/iheb15M/client-request-inspector/actions/workflows/coverage.yml)
 
 ## Overview
 

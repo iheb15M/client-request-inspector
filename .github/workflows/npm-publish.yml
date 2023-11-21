@@ -1,0 +1,38 @@
+name: npm publish
+
+on:
+  workflow_run:
+    workflows: [ "coverage" ]
+    types:
+      - completed
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.7
+          registry-url: https://registry.npmjs.org/
+
+      - name: Update version and tag
+        run: |
+          npm version major -m "Bump version to %s"
+          git push --follow-tags
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build library
+        run: npm run build
+
+
+      - name: Publish to npm
+        run: npm publish
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN_CLIENT_REQUEST_INSPECTOR }}
