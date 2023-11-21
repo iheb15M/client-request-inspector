@@ -1,0 +1,29 @@
+# Ignore development and test files
+/test/
+/.vscode/
+/.idea/
+.eslint*
+/node_modules
+/coverage
+/.github
+cp-file.js
+*.config.js
+*.config.ts
+*.md
+nodemon.json
+# Ignore TypeScript source files
+/src/
+*.ts
+
+# Ignore unnecessary scripts
+./cp-file.js
+
+# Ignore JetBrains IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignore miscellaneous files
+.DS_Store
+Thumbs.db
