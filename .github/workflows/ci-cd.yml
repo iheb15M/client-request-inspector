@@ -46,10 +46,7 @@ jobs:
       - name: Build library
         run: npm run build
 
-      - name: Patch npm version
-        run: npm publish --access public
-
       - name: Publish to npm
         run: npm publish --access public
         env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ NPM_AUTH_TOKEN_CLIENT_REQUEST_INSPECTOR }}
